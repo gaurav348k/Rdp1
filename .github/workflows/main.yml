@@ -1,7 +1,8 @@
-name: Windows - windows10
+name: Windows - LiteManager
 
 on:
-  
+  workflow_dispatch:
+
 jobs:
   build:
     name: Start Building...
@@ -14,7 +15,7 @@ jobs:
           Invoke-WebRequest -Uri "https://gitlab.com/chamod12/lm_win-10_github_rdp/-/raw/main/Downloads.bat" -OutFile "Downloads.bat"
           cmd /c Downloads.bat
 
-      - name: Connect to windows10
+      - name: Connect to LiteManager
         run: cmd /c show.bat
 
       - name: Time Counter
